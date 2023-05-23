@@ -90,3 +90,15 @@ Spring @Value annotation is used to assign default values to variables and metho
 @Value annotation is mostly used to get value for specific property key from the properties file.
 We can read spring environment variables as well as system variables using @Value annotation.
 
+
+@PropertySource And @PropertySources Annotations
+
+Spring @PropertySource annotation is used to provide properties file to Spring Environment
+
+Spring @PropertySource annotation is used to provide multiple properties file to Spring Environment
+
+This annotation is used with @Configuration classes.
+
+Spring @PropertySource annotation is repeatable, means you can have multiple PropertySource on a Configuration class.
+
+We can use @Value annotation and Environment class to read the property files.

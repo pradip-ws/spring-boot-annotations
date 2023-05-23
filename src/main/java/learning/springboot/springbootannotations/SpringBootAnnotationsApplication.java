@@ -3,6 +3,7 @@ package learning.springboot.springbootannotations;
 import learning.springboot.springbootannotations.controller.MyController;
 import learning.springboot.springbootannotations.controller.PizzaController;
 import learning.springboot.springbootannotations.lazy.LazyLoader;
+import learning.springboot.springbootannotations.propertysource.PropertySourceDemo;
 import learning.springboot.springbootannotations.repository.MyRepository;
 import learning.springboot.springbootannotations.scope.PrototypeBean;
 import learning.springboot.springbootannotations.scope.SingletonBean;
@@ -53,14 +54,19 @@ public class SpringBootAnnotationsApplication {
 //		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
 //		System.out.println(prototypeBean3.hashCode());
 
-		ValueAnnotationDemo valueAnnotationDemo = context.getBean(ValueAnnotationDemo.class);
-		System.out.println(valueAnnotationDemo.getDefaultName());
-		System.out.println(valueAnnotationDemo.getHost());
-		System.out.println(valueAnnotationDemo.getEmail());
-		System.out.println(valueAnnotationDemo.getPassword());
+//		ValueAnnotationDemo valueAnnotationDemo = context.getBean(ValueAnnotationDemo.class);
+//		System.out.println(valueAnnotationDemo.getDefaultName());
+//		System.out.println(valueAnnotationDemo.getHost());
+//		System.out.println(valueAnnotationDemo.getEmail());
+//		System.out.println(valueAnnotationDemo.getPassword());
 //		System.out.println(valueAnnotationDemo.getHomeDir());
 //		System.out.println(valueAnnotationDemo.getJavaHome());
 
-	}
+		PropertySourceDemo propertySourceDemo = context.getBean(PropertySourceDemo.class);
+		System.out.println(propertySourceDemo.getHost());
+		System.out.println(propertySourceDemo.getEmail());
+		System.out.println(propertySourceDemo.getPassword());
+		System.out.println(propertySourceDemo.getAppName());
+		System.out.println(propertySourceDemo.getAppDescription());}
 
 }
