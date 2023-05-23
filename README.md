@@ -102,3 +102,17 @@ This annotation is used with @Configuration classes.
 Spring @PropertySource annotation is repeatable, means you can have multiple PropertySource on a Configuration class.
 
 We can use @Value annotation and Environment class to read the property files.
+
+
+
+@Controller Annotation
+
+1. Spring provides @Controller annotation to make a java class as a Spring MVC controller. The @Controller annotation indicates that a particular class serves the role of a controller.
+2. Controller in Spring MVC web application is component that handles incoming HTTP requests.
+3. @Controller annotation is simply a specialization of the @Component class, which allows us to auto-detect implementation classes though the classpath scanning.
+4. We typically use @Controller in combination with a @RequestMapping annotation for request handling methods.
+
+
+@ResponseBody annotation is used to convert return type response in json response.
+
+@RestController 
