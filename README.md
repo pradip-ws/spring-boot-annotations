@@ -83,3 +83,10 @@ We use @Scope to define the scope of a @Component class or @Bean defination
 Singletone : only one instance of the bean is created and shared across the entire application. this is the default scope.
 
 Prototype : a new instance of the bean is created every time it is requested
+
+@Value Annotation
+
+Spring @Value annotation is used to assign default values to variables and method arguments.
+@Value annotation is mostly used to get value for specific property key from the properties file.
+We can read spring environment variables as well as system variables using @Value annotation.
+

@@ -8,6 +8,7 @@ import learning.springboot.springbootannotations.scope.PrototypeBean;
 import learning.springboot.springbootannotations.scope.SingletonBean;
 import learning.springboot.springbootannotations.service.MyService;
 import learning.springboot.springbootannotations.service.VegPizza;
+import learning.springboot.springbootannotations.value.ValueAnnotationDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -37,20 +38,28 @@ public class SpringBootAnnotationsApplication {
 //
 //		LazyLoader lazyLoader = context.getBean(LazyLoader.class);
 
-		SingletonBean singletonBean1 = context.getBean(SingletonBean.class);
-		System.out.println(singletonBean1.hashCode());
-		SingletonBean singletonBean2 = context.getBean(SingletonBean.class);
-		System.out.println(singletonBean2.hashCode());
-		SingletonBean singletonBean3 = context.getBean(SingletonBean.class);
-		System.out.println(singletonBean3.hashCode());
+//		SingletonBean singletonBean1 = context.getBean(SingletonBean.class);
+//		System.out.println(singletonBean1.hashCode());
+//		SingletonBean singletonBean2 = context.getBean(SingletonBean.class);
+//		System.out.println(singletonBean2.hashCode());
+//		SingletonBean singletonBean3 = context.getBean(SingletonBean.class);
+//		System.out.println(singletonBean3.hashCode());
+//
+//
+//		PrototypeBean prototypeBean1 = context.getBean(PrototypeBean.class);
+//		System.out.println(prototypeBean1.hashCode());
+//		PrototypeBean prototypeBean2 = context.getBean(PrototypeBean.class);
+//		System.out.println(prototypeBean2.hashCode());
+//		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
+//		System.out.println(prototypeBean3.hashCode());
 
-
-		PrototypeBean prototypeBean1 = context.getBean(PrototypeBean.class);
-		System.out.println(prototypeBean1.hashCode());
-		PrototypeBean prototypeBean2 = context.getBean(PrototypeBean.class);
-		System.out.println(prototypeBean2.hashCode());
-		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
-		System.out.println(prototypeBean3.hashCode());
+		ValueAnnotationDemo valueAnnotationDemo = context.getBean(ValueAnnotationDemo.class);
+		System.out.println(valueAnnotationDemo.getDefaultName());
+		System.out.println(valueAnnotationDemo.getHost());
+		System.out.println(valueAnnotationDemo.getEmail());
+		System.out.println(valueAnnotationDemo.getPassword());
+//		System.out.println(valueAnnotationDemo.getHomeDir());
+//		System.out.println(valueAnnotationDemo.getJavaHome());
 
 	}
 
